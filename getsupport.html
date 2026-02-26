@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | TrueColors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="learn-page">
+
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">TrueColors</h2>
+        </div>
+        <div class="menu">
+             <a href="index.html">Home</a>
+             <a href="about.html">About Us</a>
+             <a href="guides.html">Guides</a>
+             <a href="contact.html">Contact</a>
+        </div>  
+    </div>
+
+    <div class="auth-page-wrapper">
+        <div class="auth-card contact-card">
+            <h2 class="logo-title" style="margin-bottom: 5px;">Get in Touch</h2>
+            <p class="toggle-text" style="margin-top: 0px; margin-bottom: 20px; font-weight: 400;">
+                Have questions or want to contribute to the discussion? We'd love to hear from you.
+            </p>
+
+            <form action="https://formspree.io/f/xeelnrjy" method="POST">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Your Email" required>  
+                </div>
+
+                <div class="input-box">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="TrueColors: New Support/Contact Request">
+
+                <button type="submit" class="login-btn">Send Message</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="https://www.facebook.com/profile.php?id=61588447320399" class="fb-link" target="_blank">
+                    Visit our Facebook Page
+                </a>
+            </div>
+
+            <p class="toggle-text" style="font-size: 12px; margin-top: 10px; opacity: 0.7; display: block; text-align: center;">
+                Note: This is an educational platform. For immediate help, please contact local support services.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

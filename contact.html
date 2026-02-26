@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts | TrueColors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="learn-page">
+
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">TrueColors</h2>
+        </div>
+        <div class="menu">
+             <a href="index.html">Home</a>
+             <a href="about.html">About Us</a>
+             <a href="guides.html">Guides</a>
+             <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="auth-page-wrapper contact-wrapper">
+        <div class="auth-card contact-card">
+            <h2 class="logo-title">Connect With Us</h2>
+            
+            <form action="https://formspree.io/f/maqdvpwa" method="POST">
+                
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="How should we address you?" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Your Email Address</label>
+                    <input type="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+                
+                <div class="input-box">
+                    <label>Inquiry Type</label>
+                    <select name="type" class="themed-select">
+                        <option value="general">General Inquiry</option>
+                        <option value="partnership">Partnership / Promotion</option>
+                        <option value="school">School/Educational Use</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+                
+                <div class="input-box">
+                    <label>Your Message</label>
+                    <textarea name="message" rows="5" placeholder="Tell us how we can collaborate or help..." required></textarea>
+                </div>
+                
+                <input type="hidden" name="_subject" value="New TrueColors Contact Message">
+
+                <button type="submit" class="login-btn">Send Message</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="https://www.facebook.com/profile.php?id=61588447320399" class="fb-link" target="_blank">
+                    Visit our Facebook Page
+                </a>
+            </div>
+
+            <p class="toggle-text" style="font-size: 12px; margin-top: 10px; opacity: 0.7; text-align: center;">
+                Note: This is an educational platform. For immediate help, please contact local support services.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
