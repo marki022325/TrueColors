@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (conBtn && conText) {
         conBtn.addEventListener('click', function() {
             conText.innerHTML = `
-              Researched by: Irish Abao, Jaimie Signar, 
+        Recognition : Irish Abao, Jaimie Signar, 
                 <a href="626978030_838213352558617_7841712337375433622_n.jpg" 
                    target="_blank" 
                    class="nathan-link">
@@ -81,69 +81,4 @@ document.getElementById('avatar-input').addEventListener('change', function() {
 
         reader.readAsDataURL(file);
     }
-});
-
-
-
-const avatarBox = document.getElementById('avatar-clickable');
-const hiddenInput = document.getElementById('avatar-input');
-const previewImg = document.getElementById('avatar-preview');
-const icon = document.getElementById('plus-icon');
-
-avatarBox.addEventListener('click', function() {
-    console.log("Circle clicked!"); 
-    hiddenInput.click();
-});
-
-hiddenInput.addEventListener('change', function() {
-    const file = this.files[0];
-
-    if (file) {
-        const reader = new FileReader(); 
-
-        reader.onload = function(e) {
-            previewImg.src = e.target.result; 
-            previewImg.style.display = 'block'; 
-            icon.style.display = 'none'; 
-        }
-
-        reader.readAsDataURL(file); 
-    }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Target the Post Button safely
-    const postBtn = document.getElementById('postBtn');
-
-    // The ?. prevents an error if the user is logged out (and postBtn is null)
-    postBtn?.addEventListener('click', () => {
-        const content = document.getElementById('experienceInput').value;
-        
-        if (content.trim() === "") {
-            alert("Please type something before posting!");
-        } else {
-            alert("Post submitted! (Database connection coming next)");
-        }
-    });
-
-    // 2. Heart/Like Animation (Works for guest viewing too)
-    const mainFeed = document.getElementById('mainFeed');
-    
-    mainFeed?.addEventListener('click', (e) => {
-        const heartBtn = e.target.closest('.heart-btn');
-        if (!heartBtn) return;
-
-        // Toggle logic
-        const icon = heartBtn.querySelector('i');
-        icon.classList.toggle('fa-regular');
-        icon.classList.toggle('fa-solid');
-        heartBtn.classList.toggle('liked');
-        
-        // Premium Pop Animation
-        heartBtn.animate([
-            { transform: 'scale(1)' },
-            { transform: 'scale(1.3)' },
-            { transform: 'scale(1)' }
-        ], { duration: 200 });
-    });
 });
