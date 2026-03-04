@@ -1181,15 +1181,7 @@
     }
 
     .right-statement-box {
-        position: relative !important;
-        top: 30px !important;
-        right: 0 !important;
-        margin: 0 auto 50px auto !important;
-        transform: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        display: block !important;
+        display: display !important;
     }
 
     .cta-buttons, .button-row {
@@ -1241,6 +1233,13 @@
     }
 }
 
+/* Hide container on phones (max-width 768px) */
+@media (max-width: 768px) {
+    .right-statement-box {
+        display: none !important;
+    }
+}
+
 @media (max-width: 480px) {
     .logo {
         font-size: 30px; 
@@ -1248,21 +1247,13 @@
     }
 
     .menu a {
-        font-size: 16px; 
+        font-size: 16x
     }
 
     .statement { font-size: 32px; } 
     .sub-statement { font-size: 14px; }
     .side-title { font-size: 20px; }
     .long-statement { font-size: 14px; }
-
-    .Container {
-        top: 0 !important; 
-        margin-top: 80px !important;
-        left: 0 !important;
-        max-width: 95%;
-    }
-
     .right-statement-box {
         position: relative !important; 
         top: 0 !important;
@@ -1301,9 +1292,21 @@
     }
 }
 
-/* Hide container on phones (max-width 768px) */
-@media (max-width: 768px) {
-    .right-statement-box {
-        display: none !important;
-    }
+#Contributers {
+    position: absolute;
+    z-index: 1; 
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    filter: blur(10px);
+    color: #acb6e5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    pointer-events: none; 
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    max-width: 480px;   
+    width: 90%;         
+    white-space: normal;   
+    text-align: center;    
+    line-height: 1.6;     
 }
+
