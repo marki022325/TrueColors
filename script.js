@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (conBtn && conText) {
         conBtn.addEventListener('click', function() {
             conText.innerHTML = `
-        Recognition : Irish Abao, Jaimie Signar, 
+        Recognition: Irish Abao, Jaimie Signar, 
                 <a href="626978030_838213352558617_7841712337375433622_n.jpg" 
                    target="_blank" 
                    class="nathan-link">
@@ -82,3 +82,4 @@ document.getElementById('avatar-input').addEventListener('change', function() {
         reader.readAsDataURL(file);
     }
 });
+
